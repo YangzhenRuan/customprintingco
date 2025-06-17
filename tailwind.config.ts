@@ -104,6 +104,7 @@ const config = {
   },
   plugins: [
     require("tailwindcss-animate"),
+    require("@tailwindcss/typography"),
     ({ addUtilities, theme }: { addUtilities: any; theme: any }) => {
       const newUtilities = {
         ".animation-delay-100": { animationDelay: theme("animationDelay.100") },
