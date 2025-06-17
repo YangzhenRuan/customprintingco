@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import ChatInterface from "@/components/chat/chat-interface"
 import HeroSection from "@/components/landing/hero-section"
 import ProductShowcaseSection from "@/components/landing/product-showcase-section"
+import ProductCategoriesSection from "@/components/landing/product-categories-section"
 import SelectionModal from "@/components/selection/selection-modal"
 
 const productTypesList = [
@@ -66,6 +67,7 @@ export default function HomePage() {
     <>
       <HeroSection onStartChat={handleOpenSelectionModal} />
       <ProductShowcaseSection />
+      <ProductCategoriesSection />
       
       <SelectionModal
         isOpen={isSelectionModalOpen}
