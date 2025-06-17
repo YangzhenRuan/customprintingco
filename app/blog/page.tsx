@@ -24,7 +24,7 @@ export default async function BlogPage() {
   const recentPosts = posts.slice(1)
 
   return (
-    <div className="min-h-screen bg-background">
+    <>
       {/* 头部区域 */}
       <div className="border-b bg-card/50">
         <div className="container mx-auto px-4 py-16">
@@ -184,6 +184,6 @@ export default async function BlogPage() {
           </p>
         </div>
       </div>
-    </div>
+    </>
   )
 }
