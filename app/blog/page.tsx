@@ -11,9 +11,11 @@ import { Metadata } from "next"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { getAllPosts, getCategories } from "@/lib/blog"
 
-export const metadata: Metadata = {
-  title: "博客 - CustomPrintingco",
-  description: "了解最新的印刷技术和行业动态",
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: "博客 - CustomPrintingco",
+    description: "了解最新的印刷技术和行业动态",
+  }
 }
 
 export default async function BlogPage() {
@@ -37,6 +39,12 @@ export default async function BlogPage() {
 
       {/* 分类导航 */}
       <div className="mb-8 flex flex-wrap justify-center gap-4">
+        <Link
+          href="/blog"
+          className="rounded-full bg-muted px-4 py-2 text-sm font-medium hover:bg-muted/80"
+        >
+          <Badge variant="secondary">全部</Badge>
+        </Link>
         {categories.map((category) => (
           <Link
             key={category}
